@@ -14,6 +14,7 @@ class MenuSerializer(serializers.ModelSerializer):
 
 
 class DishSerializer(serializers.ModelSerializer):
+    restaurant = RestaurantSerializerForDish()
     class Meta:
         model = Dish
         fields = ['name', 'price']
@@ -38,3 +39,4 @@ class DriverSerializer(serializers.ModelSerializer):
     class Meta:
         model = Driver
         fields = '__all__'
+
